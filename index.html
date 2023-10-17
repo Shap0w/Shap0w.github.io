@@ -3,10 +3,13 @@
 <title>Redirecting to play store https://play.google.com/store/apps/details?id=com.conformit.intervention&hl=en_US/</title>
 <meta>
 <script>
-if( /iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
+if (/iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
  // redirects if mobile
- window.location('https://apps.apple.com/ca/app/conformit-intervention/id1520654759')
+ window.location.assign('https://apps.apple.com/ca/app/conformit-intervention/id1520654759')
+} else if (/Android|BlackBerry/i.test(navigator.userAgent)) {
+  // redirects if whatever else
+  window.location.assign('https://play.google.com/store/apps/details?id=com.conformit.intervention&hl=en_US')
 } else {
-  window.location('https://www.conformit.com/')
+  window.location.assign('https://www.conformit.com/')
 }
 </script>
